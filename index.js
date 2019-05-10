@@ -7,6 +7,10 @@ app.use((req,res,next){
     next();
 })
 
+app.post("/",function(req,res,next){
+    console.log("main post function");
+    next();
+})
 
 app.listen(8080,()=>{
 

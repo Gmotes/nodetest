@@ -1,8 +1,8 @@
 var express = require("express");
 
 var app = express();
-
-app.use((req,res,next){
+var port = 8080;
+app.use(function(req,res,next){
     console.log("Log middleware");
     next();
 })
@@ -17,6 +17,6 @@ app.post("/api",function(req,res,next){
     next();
 })
 
-app.listen(8080,()=>{
+app.listen(port,()=>{
 
 });
